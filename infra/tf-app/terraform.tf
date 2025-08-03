@@ -6,6 +6,7 @@ terraform {
     storage_account_name = "moha1173githubactions"     # Replace with your Storage Account name
     container_name       = "tfstate"
     key                  = "prod.app.tfstate"
+    use_oidc             = true
   }
 
   required_providers {
