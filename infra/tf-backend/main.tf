@@ -13,7 +13,7 @@ provider "azurerm" {
 }
 
 locals {
-  college-id = "niyo0041"
+  college-id = "moha1173"
 }
 # Resource Group for Terraform backend
 resource "azurerm_resource_group" "rg" {
