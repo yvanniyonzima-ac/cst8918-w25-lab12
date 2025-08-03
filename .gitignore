@@ -39,3 +39,6 @@ terraform.rc
 #teraform plan files
 infra/tf-backend/tf-backend.plan
 infra/tf-app/tf-app.plan
+
+# Ignore the service principal registration script
+register_sp.sh
