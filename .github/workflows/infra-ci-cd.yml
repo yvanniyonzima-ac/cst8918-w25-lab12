@@ -100,13 +100,21 @@ jobs:
         else 
           exit 0
         fi
+    
+    # check the tfplan file was created
+    - name: Check Plan File Exists
+      run: |
+        if [ ! -f tfplan ]; then
+          echo "tfplan file not found!"
+          exit 1
+        fi
         
     # Save plan to artifacts  
     - name: Publish Terraform Plan
       uses: actions/upload-artifact@v4
       with:
         name: tfplan
-        path: tfplan
+        path: ./infra/tf-app/tfplan
         
     # Create string output of Terraform Plan
     - name: Create String Output
@@ -175,7 +183,8 @@ jobs:
       uses: actions/download-artifact@v4
       with:
         name: tfplan
+        path: ./infra/tf-app
 
     # Terraform Apply
     - name: Terraform Apply
-      run: terraform apply -auto-approve tfplan
+      run: terraform apply -auto-approve ./infra/tf-app/tfplan
