@@ -187,4 +187,4 @@ jobs:
 
     # Terraform Apply
     - name: Terraform Apply
-      run: terraform apply -auto-approve ./infra/tf-app/tfplan
+      run: terraform apply -auto-approve tfplan
