@@ -49,3 +49,10 @@ You will also need the name of the resource group that you created in the previo
 # in the infra/tf-app folder
 export resourceGroupName=$(terraform output -raw resource_group_name)
 ```
+
+# Submission
+## Pull Request check of workflows
+![screenshots](screenshots/pr-checks.PNG)
+
+## Pull Request check of Tf-plan
+![screenshots](screenshots/pr-tf-plan.PNG)
